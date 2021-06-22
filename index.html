@@ -11,12 +11,17 @@
     <!--<script>
         alert("hola")
     </script>-->
-    <header class="border-block">
-        <div class="rl-container flex-align-center">
-            <img src="images/Logo.jpeg" width="30" height="30" alt="logo">
-            <h3 class="padding-right">Bienvenid@s!</h3>
+    <header id="header" class="border-block">
+        <div class="wheel-container">
+            <img class="wheel-button" src="images/color_wheel.png" width="30" height="30">
+            <div>
+                <div class="rl-container flex-align-center">
+                    <img src="images/Logo.jpeg" width="30" height="30" alt="logo">                    
+                    <h3 class="padding-right">Bienvenid@s!</h3>
+                </div>
+                <p class="padding-bottom" id="subtitulo">Acá voy a compartir todo sobre uñas</p>
+            </div>
         </div>
-        <p class="padding-bottom" id="subtitulo">Acá voy a compartir todo sobre uñas</p>
         <nav>
             <ul>
                 <li><a href="#introduccion">Introducción</a></li>
@@ -30,9 +35,12 @@
     <section id="introduccion" class="border-block">
         <!--Esto es un comentario-->
         <div class="lr-container">
-            <div class="transform-img" style="width: 60%">
-                <h2 class="marquee-text">¿Qué es el nail art?</h2>
-                <p class="padding-bottom">Se trata de aplicar diferente técnicas al pintarnos las uñas para lograr diferentes terminaciones, por ejemplo pueden ser con glitter, abstractas, con puntitos. Hay un montón de técnicas! Es el momento perfecto para ser creativ@s</p>
+            <div class="hide-overflow">
+                <div class="marquee-container">
+                    <div class="marquee-gradient"></div>
+                    <h2 class="marquee-text">¿Qué es el nail art?</h2>
+                </div>
+                <p class="w60 padding-bottom">Se trata de aplicar diferente técnicas al pintarnos las uñas para lograr diferentes terminaciones, por ejemplo pueden ser con glitter, abstractas, con puntitos. Hay un montón de técnicas! Es el momento perfecto para ser creativ@s</p>
                 <a href="https://www.pinterest.es/ayala1559/nail-art/" target="_blank">¡Algunas ideas!</a>
             </div>
             <img class="transform-img" src="images/brillosas.gif" width="200" height="200">
@@ -65,7 +73,7 @@
             </select>
         </div>
 
-        <button type="button" onclick="cambiarColor()">Enviar</button>
+        <button type="button" onclick="cambiarColor('titulo','purple')">Enviar</button>
 
     </section>
     <footer class="border-block center-container">

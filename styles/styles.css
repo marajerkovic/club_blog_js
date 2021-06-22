@@ -107,6 +107,9 @@ header {
 .post-text {
     grid-column: 2/4;
     text-align: justify;
+    line-height: 1em;
+    max-height: 4em;
+    overflow: hidden;
 }
 
 .post-date {
@@ -221,10 +224,6 @@ header, footer {
     100% {transform: rotate(360deg);}
 }
 
-.marquee-text {
-    animation: marquesina2 2s infinite;
-}
-
 @keyframes marquesina {
     0% { margin-left: 100%; }
     100% { margin-left: 0%; }
@@ -235,6 +234,53 @@ header, footer {
     100% { transform: translateX(100%); }
 }
 
+.hide-overflow {
+    overflow: hidden;
+}
+
+.marquee-text {
+    animation: marquesina2 2s infinite;
+    background-color: var(--light-purple);
+    grid-column: 1/2;
+    grid-row: 1/2;
+    z-index: 1;
+}
+
+.marquee-gradient {
+    background-image: linear-gradient(45deg, transparent,var(--dark-purple));
+    width: 100%;
+    height: 30px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    z-index: 0;
+}
+
+.marquee-container {
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.wheel-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.wheel-button {
+    cursor: pointer;
+}
+
+.more-button {
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0
+}
+
+.more-button:hover {
+    background-color: transparent;
+    border: none;
+}
 
 /*
     1) Estilos por tipo de etiqueta 
