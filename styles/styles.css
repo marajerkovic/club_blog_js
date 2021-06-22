@@ -1,0 +1,261 @@
+:root {
+    --dark-purple: #7d6b94;
+    --light-purple: rgb(201, 178, 219);
+    --gray: rgb(68, 56, 56);
+    --nombre-de-la-variable: 20px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.border-block {
+    border: 1px solid #a79c9c;
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--light-purple);
+}
+
+.form-item {
+    padding-bottom: 10px;
+}
+
+.lr-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+}
+
+.logos {
+    animation: move-around 2s infinite alternate;
+}
+
+@keyframes move-around {
+    0% { transform: translateX(30%);}
+    50% { transform: translateX(70%);}
+    100% { transform: translateX(40%);}
+}
+
+.center-container > img, .center-container > a { 
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.rl-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+}
+
+.flex-align-center {
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+header {
+    text-align: right;
+}
+
+.padding-bottom {
+    padding-bottom: 20px;
+}
+
+.padding-right {
+    padding-right: 10px;
+}
+
+.form-container {
+    display: grid;
+    grid-template-columns: 100px 300px;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+.flex-center-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.blog-container {
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+.post-container {
+    display: grid;
+   /*grid-template-columns: 10% 80% 10%;*/
+    grid-template-columns: 0.5fr 2fr 0.5fr;
+}
+
+.post-picture {
+    grid-row: 1/3;
+    text-align: center;
+}
+
+.post-text {
+    grid-column: 2/4;
+    text-align: justify;
+}
+
+.post-date {
+    justify-self: end;
+}
+
+.hide {
+    display: none;
+}
+
+.post-picture:hover h6 {
+    display: block;
+}
+
+body {
+    background-color: var(--dark-purple);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Copperplate, Fantasy;
+    color: var(--dark-purple);
+}
+
+p, label, input, textarea, select {
+    color: var(--gray);
+    font-family: Calibri, Verdana, sans-serif;
+}
+
+label {
+    text-transform: uppercase;
+}
+
+a {
+    font-family: monospace;
+    color: black;
+    text-decoration: overline;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+a:hover {
+    text-shadow: 0px 0px 5px white;
+}
+
+button {
+    background-color: white;
+    color: var(--dark-purple);
+    font-family: Calibri, sans-serif;
+    padding: 5px;
+    border: 1px solid var(--dark-purple);
+    font-size: 15px;
+}
+
+button:hover {
+    background-color: var(--dark-purple);
+    color: white;
+}
+
+.post-picture img {
+    border-radius: 50%;
+    box-shadow: 5px 10px var(--dark-purple);
+    margin-bottom: 10px;
+    opacity: 0.8;
+    filter: grayscale(1);
+}
+
+.post-picture img:hover {
+    filter: grayscale(0);
+}
+
+header, footer {
+    background-image: url("../images/star-bg.jpeg")
+}
+
+.star-shaped {
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    transition: transform 1s, filter 1s;
+}
+
+.star-shaped:hover {
+    filter: grayscale(1);
+    transform: scale(1.5);
+}
+
+/*.transform-img {
+    transition: transform 1.5s;
+}
+
+.transform-img:hover {
+    transform: scale(1.5);
+}*/
+
+.animation-test {
+    background-color: black;
+    width: 100px;
+    height: 100px;
+    /*animation-name: cambiar-color;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;  
+    animation-direction: alternate;*/
+    animation: rotar 2s infinite alternate;
+}
+
+@keyframes cambiar-color {
+    0% {background-color: blue;}
+    50% {background-color: purple;}
+    100% {background-color: pink;}
+}
+
+@keyframes rotar {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+.marquee-text {
+    animation: marquesina2 2s infinite;
+}
+
+@keyframes marquesina {
+    0% { margin-left: 100%; }
+    100% { margin-left: 0%; }
+}
+
+@keyframes marquesina2 {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(100%); }
+}
+
+
+/*
+    1) Estilos por tipo de etiqueta 
+
+body {
+    .....
+}
+h1 { 
+    ...
+}
+  2) Estilos por id de etiqueta
+
+#titulo-sobre-mi {
+    ......
+}
+
+  3) Estilos por clase de etiqueta
+.ejemplo {
+    ...
+}
+
+*/
+
+

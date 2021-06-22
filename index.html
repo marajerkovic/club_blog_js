@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Mi página</title>
+    <script src="index.js"></script>
+</head>
+<body>
+    <!--<script>
+        alert("hola")
+    </script>-->
+    <header class="border-block">
+        <div class="rl-container flex-align-center">
+            <img src="images/Logo.jpeg" width="30" height="30" alt="logo">
+            <h3 class="padding-right">Bienvenid@s!</h3>
+        </div>
+        <p class="padding-bottom" id="subtitulo">Acá voy a compartir todo sobre uñas</p>
+        <nav>
+            <ul>
+                <li><a href="#introduccion">Introducción</a></li>
+                <li><a href="#ejemplos">Ejemplos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="introduccion" class="border-block">
+        <!--Esto es un comentario-->
+        <div class="lr-container">
+            <div class="transform-img" style="width: 60%">
+                <h2 class="marquee-text">¿Qué es el nail art?</h2>
+                <p class="padding-bottom">Se trata de aplicar diferente técnicas al pintarnos las uñas para lograr diferentes terminaciones, por ejemplo pueden ser con glitter, abstractas, con puntitos. Hay un montón de técnicas! Es el momento perfecto para ser creativ@s</p>
+                <a href="https://www.pinterest.es/ayala1559/nail-art/" target="_blank">¡Algunas ideas!</a>
+            </div>
+            <img class="transform-img" src="images/brillosas.gif" width="200" height="200">
+        </div>
+    </section>
+    <section id="ejemplos" class="border-block">
+        <h4>Ejemplos:</h4>
+        <div class="center-container">
+            <img class="star-shaped" src="images/unias1.jpeg" width="300" height="300">
+            <img class="star-shaped" src="images/unias3.jpeg" width="300" height="300">
+            <img class="star-shaped" src="images/unias2.jpeg" width="300" height="300">
+        </div>
+    </section>
+    <section id="contacto" class="border-block flex-center-column">
+        <div class="lr-container padding-bottom flex-align-center">
+            <img class="padding-right" src="images/Facebook.png" width="30" height="30">
+            <h3 id="titulo">¿Tenés alguna pregunta?</h3>
+        </div>
+
+        <div class="form-container padding-bottom">
+            <label for="nombre">Nombre:</label>
+            <input id="nombre" type="text" placeholder="...">
+            <label for="consulta">Consulta:</label>
+            <textarea id="consulta"></textarea>
+            <label for="contacto">Modo de contacto:</label>
+            <select name="contacto">
+                <option value="cel">Celular</option>
+                <option value="mail">Mail</option>
+                <option value="correo">Correo</option>
+            </select>
+        </div>
+
+        <button type="button" onclick="cambiarColor()">Enviar</button>
+
+    </section>
+    <footer class="border-block center-container">
+        <a class="logos" href="https://facebook.com"><img src="images/Facebook.png" width="50" height="50"></a>
+        <a class="logos" href="https://twitter.com"><img src="images/Twitter.png" width="50" height="50" alt="logo de twitter"></a>
+        <a class="logos" href="https://instagram.com"><img src="images/Instagram.png" width="50" height="50"></a>
+    </footer>
+</body>
+</html>
